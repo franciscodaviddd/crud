@@ -1,0 +1,46 @@
+//______COLORS______//
+$color-1: #4a22f4;
+$color-2: #03fec3;
+$bg: #d6d6d6;
+$alert: crimson;
+$success: #02a24b;
+//______GRAYS COLORS______//
+$gray-1: #fdfdfd;
+$gray-2: #eeeeee;
+$gray-3: #d6d6d6;
+$gray-4: #c3c3c3;
+$gray-5: #bebebe;
+$gray-6: #adadad;
+$gray-7: #9e9e9e;
+$gray-8: #6d6d6d;
+$gray-9: #3d3d3d;
+$gray-10: #222222;
+
+//______FONTS______//
+$saira: "Saira", sans-serif;
+$lato: "Lato", sans-serif;
+$roboto: "Roboto", sans-serif;
+$monserrat: "Montserrat", sans-serif;
+$poppins: "Poppins", sans-serif;
+
+$font-family: $roboto;
+
+//______BREAKPOINTS______//
+
+$breakpoints: (
+  p: 320px,
+  t: 768px,
+  d: 1024px,
+  hd: 1400px,
+);
+$sizes: map-keys($breakpoints);
+
+//______OTHERS______//
+
+$max-width: 1024px;
+$link-color: $color-2;
+$c-placeholder: $gray-7;
+$transition: all 0.2s ease;
+$h-header: 60px;
+$border-radius: 8px;
+$box-shadow: -2px 2px 4px 1px rgba($gray-7, 0.2);

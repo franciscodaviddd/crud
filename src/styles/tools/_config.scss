@@ -1,0 +1,28 @@
+@forward "variables";
+@use "variables" as *;
+@mixin to($size) {
+  @if map-has-key(variables.$breakpoints, $size) {
+    // Si el parámetro es el nombre de un tamaño, se extrae desde el map
+    @media screen and (max-width: map-get($breakpoints, $size) - 1) {
+      @content;
+    }
+  } @else {
+    // Si el parámetro no existe en el map, se toma su valor para construir la media query
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin from($size) {
+  @if map-has-key($breakpoints, $size) {
+    // Si el parámetro es el nombre de un tamaño, se extrae desde el map
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  }
+}

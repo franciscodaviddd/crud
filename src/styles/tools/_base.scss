@@ -1,0 +1,84 @@
+@use "config" as *;
+
+//LATO
+//@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+//MONSERRAT
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap");
+
+//ROBOTO
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+//POPPINS
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0 solid;
+
+  &:active,
+  &:focus,
+  &:visited,
+  &:hover {
+    outline: 0 solid;
+  }
+}
+
+html {
+  font-size: 1.1rem;
+  scroll-behavior: smooth;
+
+  @include from(d) {
+    font-size: 1.15rem;
+  }
+}
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $gray-8;
+}
+
+input,
+textarea {
+  font-family: $font-family;
+  outline: 0;
+}
+button {
+  border: none;
+  width: auto;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+::placeholder {
+  color: $c-placeholder;
+}

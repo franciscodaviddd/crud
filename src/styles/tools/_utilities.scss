@@ -1,0 +1,235 @@
+@use "config" as *;
+
+.btn-primary {
+  background: $color-2;
+  color: white;
+  font-size: 1rem;
+  border: 0;
+  border-radius: $border-radius;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background: lighten($color-2, 15);
+  }
+}
+@each $size, $screen-size in $breakpoints {
+  @media screen and (min-width: $screen-size) {
+    @for $i from 1 through 10 {
+      .order-#{$i}-#{$size} {
+        order: $i;
+      }
+    }
+    @for $i from 1 through 10 {
+      .gap-#{$i}-#{$size} {
+        gap: #{$i}rem;
+      }
+    }
+  }
+}
+
+@each $size, $screen-size in $breakpoints {
+  @media all and (min-width: $screen-size) {
+    .rows-#{$size} {
+      flex-direction: row;
+    }
+
+    .column-#{$size} {
+      flex-direction: column;
+    }
+
+    .rows-reverse-#{$size} {
+      flex-direction: row-reverse;
+    }
+
+    .column-reverse-#{$size} {
+      flex-direction: column-reverse;
+    }
+
+    .wrap-#{$size} {
+      flex-wrap: wrap;
+    }
+
+    .no-wrap-#{$size} {
+      flex-wrap: nowrap;
+    }
+
+    .jc-flex-start-#{$size} {
+      justify-content: flex-start;
+    }
+
+    .jc-flex-end-#{$size} {
+      justify-content: flex-end;
+    }
+
+    .jc-center-#{$size} {
+      justify-content: center;
+    }
+
+    .jc-between-#{$size} {
+      justify-content: space-between;
+    }
+
+    .jc-around-#{$size} {
+      justify-content: space-around;
+    }
+
+    .jc-evenly-#{$size} {
+      justify-content: space-evenly;
+    }
+
+    .ai-flex-start-#{$size} {
+      align-items: flex-start;
+    }
+
+    .ai-flex-end-#{$size} {
+      align-items: flex-end;
+    }
+
+    .ai-center-#{$size} {
+      align-items: center;
+    }
+
+    .ai-stretch-#{$size} {
+      align-items: stretch;
+    }
+
+    .ai-baseline-#{$size} {
+      align-items: baseline;
+    }
+
+    .ac-flex-end-#{$size} {
+      align-content: flex-end;
+    }
+
+    .ac-flex-start-#{$size} {
+      align-content: flex-start;
+    }
+
+    .ac-center-#{$size} {
+      align-content: center;
+    }
+
+    .ac-around-#{$size} {
+      align-content: space-around;
+    }
+
+    .ac-between-#{$size} {
+      align-content: space-between;
+    }
+
+    .as-stretch-#{$size} {
+      align-self: stretch;
+    }
+
+    .as-flex-end-#{$size} {
+      align-self: flex-end;
+    }
+
+    .as-flex-start-#{$size} {
+      align-self: flex-start;
+    }
+
+    .as-center-#{$size} {
+      align-self: center;
+    }
+
+    .as-baseline-#{$size} {
+      align-self: baseline;
+    }
+  }
+}
+
+@each $size, $screen-size in $breakpoints {
+  @media all and (min-width: $screen-size) {
+    @for $i from 1 through 20 {
+      .p-#{$i*5}-#{$size} {
+        width: percentage($i * 0.05);
+      }
+    }
+
+    .hide-#{$size} {
+      visibility: hidden;
+      display: none;
+    }
+
+    .show-#{$size} {
+      display: block;
+      visibility: visible;
+    }
+
+    .left-#{$size} {
+      margin-left: 0;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .center-#{$size} {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .right-#{$size} {
+      margin-right: 0;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    @for $i from 0 through 8 {
+      $unit: 1rem * $i;
+
+      .mt-#{$i}-#{$size} {
+        margin-top: $unit;
+      }
+
+      .mb-#{$i}-#{$size} {
+        margin-bottom: $unit;
+      }
+
+      .ml-#{$i}-#{$size} {
+        margin-left: $unit;
+      }
+
+      .mr-#{$i}-#{$size} {
+        margin-right: $unit;
+      }
+
+      .mw-#{$i}-#{$size} {
+        margin-right: $unit;
+        margin-left: $unit;
+      }
+
+      .mh-#{$i}-#{$size} {
+        margin-top: $unit;
+        margin-bottom: $unit;
+      }
+
+      .pt-#{$i}-#{$size} {
+        padding-top: $unit;
+      }
+
+      .pb-#{$i}-#{$size} {
+        padding-bottom: $unit;
+      }
+
+      .pl-#{$i}-#{$size} {
+        padding-left: $unit;
+      }
+
+      .pr-#{$i}-#{$size} {
+        padding-right: $unit;
+      }
+
+      .pw-#{$i}-#{$size} {
+        padding-right: $unit;
+        padding-left: $unit;
+      }
+
+      .ph-#{$i}-#{$size} {
+        padding-top: $unit;
+        padding-bottom: $unit;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../tools/config" as *;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  th,
+  td {
+    width: 33.3%;
+    text-align: left;
+    border: 1px solid lighten($color-1, 35);
+    height: 40px;
+    padding-left: 0.5rem;
+  }
+  th {
+    background-color: $color-1;
+    color: #ffffff;
+  }
+  button {
+    background: transparent;
+    color: $gray-8;
+    margin-right: 5px;
+    margin-left: 5px;
+    &:hover {
+      opacity: 0.85;
+    }
+    &:nth-child(1) {
+      .table__icon {
+        color: $success;
+      }
+    }
+    &:nth-child(2) {
+      .table__icon {
+        color: $alert;
+      }
+    }
+  }
+}
